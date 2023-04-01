@@ -14,7 +14,7 @@ async function getUser(username) {
     const { data } = await axios(APIURL + username);
     createUserCard(data);
     getRepos(username);
-    // getFollowers(data.followers_url);
+    getFollowers(data.followers_url);
     // getFollowing(username);
   } catch (err) {
     if (err.response.status == 404) {
