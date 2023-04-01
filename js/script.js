@@ -15,7 +15,7 @@ async function getUser(username) {
     createUserCard(data);
     getRepos(username);
     // getFollowers(data.followers_url);
-    // getFollowing(username);
+    getFollowing(username);
   } catch (err) {
     if (err.response.status == 404) {
       createErrorCard("No profile with that username");
